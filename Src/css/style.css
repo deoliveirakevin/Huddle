@@ -1,0 +1,176 @@
+
+body{
+    background-color: var(--cor-de-fundo);
+    background-image: url(../images/bg-desktop.svg);
+
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.container{
+    display: grid;
+    grid-template-areas: "header header"
+                         "section section"  
+                         "footer footer";
+
+    padding: 30px 70px;          
+}
+
+.header{
+    grid-area: header;
+    display: flex;
+    margin-bottom: 50px;
+    
+    
+}
+
+.header .logo{
+    display: flex;
+    width: 200px;
+    height: 60px;
+
+}
+
+.section{
+    grid-area: section;
+    margin-bottom: 50px;
+}
+
+.section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 60px;
+}
+
+.section .informacoes{
+    display: grid;
+    grid: 30px;
+}
+
+.section .titulo{
+    color: #f5f5f5f5;
+    font-size: 40px;
+    font-weight: 600;
+    
+
+}
+
+.section .texto{
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 400;
+   
+}
+
+.footer{
+    grid-area: footer;
+    gap: 20px;
+
+}
+
+.footer{
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+
+}
+
+.section .informacoes .botao{
+     background-color: #f5f5f5f5;
+     width: 200px;
+     height: 60px;
+     border-radius: 30px;
+     font-size: 20px;
+     margin-top: 20px;
+}
+
+.section .informacoes .botao:active{
+    background-color: var(--color-esc);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.botao-esc{
+    color: var(--cor-de-fundo);
+    padding: 15px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.logo-insta{
+    width: 40px;
+}
+
+.logo-facebook{
+    width: 40px;
+}
+
+.logo-twitter{
+    width: 40px;
+}
+
+@media(max-width:800px){
+
+    .section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section .informacoes .botao{
+        width: 400px;
+        height: 80px;
+        border-radius: 40px;
+
+    }
+
+    .container{
+        gap: 30px;
+    }
+
+    .texto{
+        padding: 20px;
+    }
+
+    .footer{
+        margin-top: 50px;
+        margin-right: 93px;
+    }
+
+
+
+}
+
+@media(max-width:500px){
+    .section .informacoes .botao{
+        width: 300px;
+        height: 60px;
+    }
+
+    .ilustration-img{
+        width: 350px;
+    }
+
+    .section .titulo{
+        font-size: 50px;
+
+    }
+
+    .section .texto{
+        font-size: 30px;
+    }
+
+}
